@@ -1,3 +1,11 @@
-// 引入全局配置样式
+// 全局变量
 @import 'variables';
+
+// 抹平浏览器默认样式差异
 @import 'reboot';
+
+// mixin scss函数
+@import 'mixin';
+
+// Button 组件样式
+@import '../components/button/style'
