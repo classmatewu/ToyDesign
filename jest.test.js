@@ -1,3 +1,4 @@
+// 通用js逻辑测试样例
 // CRA 已经内置了jest框架，所以我们直接执行命令即可，开箱即用
 // npx jest jest.test.js
 // npx jest jest.test.js --watch
