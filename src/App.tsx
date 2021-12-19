@@ -7,11 +7,13 @@ const App: React.FC = () => {
       <h1>hello world</h1>
       <h2>hello world</h2>
       <h3>hello world</h3>
-      <Button>Button</Button>
+      <Button onClick={() => {alert('click')}} autoFocus className={'test'}>Button</Button>
+      <Button btnType={ButtonType.Primary} className={'test'}>Button</Button>
       <Button btnType={ButtonType.Primary} disabled>Button</Button>
       <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>Button</Button>
       <Button btnType={ButtonType.Link} href="https://cloud.tencent.com">Button</Button>
       <Button btnType={ButtonType.Link} href="https://cloud.tencent.com" disabled>Button</Button>
+      <Button btnType={ButtonType.Link} href="https://cloud.tencent.com" target="_blank">Button</Button>
       <hr/>
       <code>
         const a = b + c
