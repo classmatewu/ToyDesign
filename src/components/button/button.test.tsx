@@ -7,8 +7,22 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import Button from './Button'
 
+// test
 test('first React FC Test', () => {
   const wapper = render(<Button>Hello</Button>) // 渲染一个wapper
   const element = wapper.queryByText('Hello') // 找到wapper里文本为'Hello'的节点
   expect(element).toBeTruthy() // 找到则为真
+  expect(element).toBeInTheDocument() // 是否在文档中，这个是 jest-dom 带来的 API，比 toBeTruthy 要更语义化一点
+})
+
+// Button 组件测试样例
+describe('test Button component', () => {
+  // 测试默认按钮
+  it('should render the correct default button', () => {
+    const wapper = render(<Button>Button</Button>) // 渲染一个wapper
+    const element = wapper.queryByText('Button')
+    expect(element).toBeInTheDocument()
+    expect(element?.tagName).toEqual('BUTTON')
+    expect(element).toHaveClass('btn btn-default')
+  })
 })
